@@ -249,6 +249,6 @@ The `frontend/netlify.toml` file handles the Netlify build configuration. To dep
 
 ## Live Demo
 
-🔗 **Frontend:** [Add your Netlify deployment URL here]
+🔗 **Frontend:** https://leadlow.netlify.app/
 
-🔗 **Backend API:** [Add your Render deployment URL here]
+🔗 **Backend API:** https://leadflow-crm-5fui.onrender.com/api
