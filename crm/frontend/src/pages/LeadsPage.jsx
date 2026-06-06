@@ -7,7 +7,7 @@ export default function LeadsPage() {
 
   return (
     <div className="flex-1 flex flex-col min-h-0">
-      {/* Page header */}
+      
       <div className="px-6 py-4 border-b border-zinc-800/60 shrink-0">
         <div className="flex items-center gap-2">
           <h1 className="text-sm font-semibold text-zinc-100">

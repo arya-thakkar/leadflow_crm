@@ -1,4 +1,4 @@
-/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
@@ -19,7 +19,7 @@ module.exports = {
           600: '#0d9488',
           700: '#0f766e',
           800: '#115e59',
-          850: '#0e4d4c', // custom darker teal
+          850: '#0e4d4c', 
           900: '#0d3b3a',
           925: '#0c3535',
           950: '#0a2626',

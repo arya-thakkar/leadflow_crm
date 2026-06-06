@@ -33,7 +33,7 @@ export function useLeads(activeSheet, updateSheetCount) {
     }
   }, [activeSheet, page, search, statusFilter, sort]);
 
-  // Reset to page 1 when filters change
+  
   useEffect(() => { setPage(1); }, [activeSheet, search, statusFilter]);
 
   useEffect(() => { fetch(); }, [fetch]);

@@ -9,7 +9,7 @@ Priya Sharma,priya@startup.io,+91 87654 32109,StartupIO,Contacted,Demo scheduled
 
 export default function ImportDropzone({ onImport, onClose }) {
   const [dragging, setDragging] = useState(false);
-  const [parsed, setParsed] = useState(null); // { rows, valid, invalid, headers }
+  const [parsed, setParsed] = useState(null); 
   const [importing, setImporting] = useState(false);
   const [done, setDone] = useState(false);
   const fileRef = useRef(null);
@@ -48,7 +48,7 @@ export default function ImportDropzone({ onImport, onClose }) {
       setDone(true);
       setTimeout(onClose, 1500);
     } catch {
-      // error handled upstream
+      
     } finally {
       setImporting(false);
     }
@@ -67,7 +67,7 @@ export default function ImportDropzone({ onImport, onClose }) {
       <div className="sheet-overlay" onClick={onClose} />
       <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
         <div className="bg-zinc-900 border border-zinc-800 rounded-xl w-full max-w-lg shadow-2xl animate-fade-in">
-          {/* Header */}
+          
           <div className="flex items-center justify-between px-5 py-4 border-b border-zinc-800">
             <div>
               <h2 className="text-sm font-semibold text-zinc-100">Import leads from CSV</h2>
@@ -79,7 +79,7 @@ export default function ImportDropzone({ onImport, onClose }) {
           <div className="p-5 space-y-4">
             {!parsed ? (
               <>
-                {/* Drop zone */}
+                
                 <div
                   onDragOver={(e) => { e.preventDefault(); setDragging(true); }}
                   onDragLeave={() => setDragging(false)}
@@ -105,7 +105,7 @@ export default function ImportDropzone({ onImport, onClose }) {
                   <input ref={fileRef} type="file" accept=".csv" className="hidden" onChange={onFileChange} />
                 </div>
 
-                {/* Required columns hint */}
+                
                 <div className="bg-zinc-800/50 rounded-lg px-4 py-3">
                   <p className="text-[11px] text-zinc-500 mb-2 font-medium">Required columns</p>
                   <div className="flex flex-wrap gap-1.5">
@@ -135,7 +135,7 @@ export default function ImportDropzone({ onImport, onClose }) {
               </div>
             ) : (
               <>
-                {/* Preview */}
+                
                 <div className="flex items-center gap-3 p-3 bg-zinc-800/50 rounded-lg">
                   <div className="w-8 h-8 bg-zinc-800 rounded-lg flex items-center justify-center shrink-0">
                     <FileText size={14} className="text-zinc-400" />
@@ -151,7 +151,7 @@ export default function ImportDropzone({ onImport, onClose }) {
                   </button>
                 </div>
 
-                {/* Stats */}
+                
                 <div className="grid grid-cols-2 gap-3">
                   <div className="bg-emerald-950/30 border border-emerald-900/50 rounded-lg p-3 text-center">
                     <div className="text-xl font-semibold text-emerald-400">{parsed.valid.length}</div>
@@ -178,7 +178,7 @@ export default function ImportDropzone({ onImport, onClose }) {
                   </div>
                 )}
 
-                {/* Preview table */}
+                
                 {parsed.valid.length > 0 && (
                   <div className="border border-zinc-800 rounded-lg overflow-hidden">
                     <div className="px-3 py-2 border-b border-zinc-800 bg-zinc-800/40">

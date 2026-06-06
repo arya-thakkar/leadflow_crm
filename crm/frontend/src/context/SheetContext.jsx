@@ -14,7 +14,7 @@ export const SheetProvider = ({ children }) => {
     try {
       const { data } = await getSheets();
       setSheets(data.sheets);
-      // Auto-select first sheet
+      
       if (data.sheets.length > 0 && !activeSheet) {
         setActiveSheet(data.sheets[0]);
       }
@@ -23,7 +23,7 @@ export const SheetProvider = ({ children }) => {
     } finally {
       setLoadingSheets(false);
     }
-  }, []); // eslint-disable-line
+  }, []); 
 
   useEffect(() => { fetchSheets(); }, [fetchSheets]);
 

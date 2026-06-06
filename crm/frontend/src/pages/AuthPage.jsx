@@ -6,7 +6,7 @@ import toast from 'react-hot-toast';
 import { ArrowRight, Layers } from 'lucide-react';
 
 export default function AuthPage() {
-  const [mode, setMode] = useState('login'); // 'login' | 'signup'
+  const [mode, setMode] = useState('login'); 
   const [form, setForm] = useState({ name: '', email: '', password: '' });
   const [loading, setLoading] = useState(false);
   const { loginUser } = useAuth();
@@ -26,7 +26,7 @@ export default function AuthPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Frontend password validation for signup mode
+    
     if (mode === 'signup') {
       const pwdErrors = validatePassword(form.password);
       if (pwdErrors.length) {
@@ -57,12 +57,12 @@ export default function AuthPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center px-4">
-      {/* Background grid */}
+      
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff04_1px,transparent_1px),linear-gradient(to_bottom,#ffffff04_1px,transparent_1px)] bg-[size:48px_48px]" />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-zinc-950" />
 
       <div className="relative w-full max-w-sm animate-fade-in">
-        {/* Logo */}
+        
         <div className="flex items-center gap-2 mb-10 justify-center">
           <div className="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center">
             <Layers size={16} className="text-white" />
